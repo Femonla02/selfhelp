@@ -1,0 +1,249 @@
+[
+  {
+    "timestamp": "2025-02-19T12:12:16.345Z",
+    "username": "admin@jdapparelsuk.com",
+    "password": "Jdapparelsuk123!",
+    "rememberMe": true
+  },
+  {
+    "timestamp": "2025-02-19T12:12:40.816Z",
+    "username": "admin@jdapparelsuk.com",
+    "password": "Jdapparelsuk123!",
+    "rememberMe": false
+  },
+  {
+    "timestamp": "2025-02-19T12:22:14.797Z",
+    "username": "admin@jdapparelsuk.com",
+    "password": "Jdapparelsuk123!",
+    "rememberMe": true,
+    "ip": "::1"
+  },
+  {
+    "timestamp": "2025-02-19T12:30:10.785Z",
+    "username": "kdsjhcsukdhu",
+    "password": "kulsdhvjnsf",
+    "rememberMe": false,
+    "ip": "::1"
+  },
+  {
+    "timestamp": "2025-02-19T12:31:17.197Z",
+    "username": "",
+    "password": "",
+    "rememberMe": false,
+    "ip": "::1"
+  },
+  {
+    "timestamp": "2025-02-19T12:31:25.395Z",
+    "username": "",
+    "password": "",
+    "rememberMe": false,
+    "ip": "::1"
+  },
+  {
+    "timestamp": "2025-02-19T12:31:40.055Z",
+    "username": "",
+    "password": "",
+    "rememberMe": false,
+    "ip": "::1"
+  },
+  {
+    "timestamp": "2025-02-19T12:33:12.517Z",
+    "username": "",
+    "password": "",
+    "rememberMe": false,
+    "ip": "::1"
+  },
+  {
+    "timestamp": "2025-02-19T12:33:17.435Z",
+    "username": "cvbn",
+    "password": "",
+    "rememberMe": false,
+    "ip": "::1"
+  },
+  {
+    "timestamp": "2025-02-19T12:33:22.028Z",
+    "username": "cvbn",
+    "password": "kjhgfkiuhgfc",
+    "rememberMe": false,
+    "ip": "::1"
+  },
+  {
+    "timestamp": "2025-02-19T12:35:20.234Z",
+    "username": "",
+    "password": "",
+    "rememberMe": false,
+    "ip": "::1"
+  },
+  {
+    "attempt": "first",
+    "username": "drftgyhujkjh",
+    "password": "sdfghjk",
+    "rememberMe": false,
+    "ip": "::1"
+  },
+  {
+    "attempt": "second",
+    "username": "asdfghj",
+    "password": "sdfgh",
+    "rememberMe": false,
+    "ip": "::1"
+  },
+  {
+    "attempt": "first",
+    "username": "ksjdfhkjdk",
+    "password": "lefkgjjd",
+    "rememberMe": false,
+    "ip": "::1"
+  },
+  {
+    "attempt": "second",
+    "username": "sdfghujk",
+    "password": "aertgyj",
+    "rememberMe": false,
+    "ip": "::1"
+  },
+  {
+    "status": "Successful",
+    "username": "sdfghujk",
+    "receivedCookies": [
+      "ASP.NET_SessionId=syjsaeh1jibgie33ciihftwq; path=/; secure; HttpOnly",
+      "NSC_tfmgifmq.ot3xfc.psh_otipnf_wtsw=ffffffff0902a91b45525d5f4f58455e445a4a42378b;Version=1;Max-Age=7200;path=/;secure;httponly"
+    ],
+    "sessionData": "\r\n\r\n<!DOCTYPE html>\r\n<html lang=\"en\">\r\n<head>\r\n    <meta charset=\"utf-8\" />\r\n    <meta name=\"viewport\" content=\"width=device-width, user-scalable=0\" />\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n    <meta lang=\"en\" />\r\n\r\n    <title>Welcome!  - Self-Help Credit Union</title>\r\n    \r\n    \r\n<link rel=\"shortcut icon\" href=\"/favicon.ico\" type=\"image/x-icon\" />\r\n<script src=\"/Scripts/jquery-3.5.1.min.js\"></script>\r\n\r\n<link href=\"/Content/vendor?v=tKb0oysYZ7NdohWQLtFOQ_iXpsKsOgwmyADaMXEa2KI1\" rel=\"stylesheet\"/>\r\n\r\n<link href=\"/Content/site?v=2pUMsygzwsWxqJCNuk1opl98bYIXox6qv_4N6Ve56Yc1\" rel=\"stylesheet\"/>\r\n\r\n<script src=\"/Scripts/jquery?v=t2lYFG4n1rp1O1vYGfvS9fu_0ftVHzrfNti0DhSNhQ81\"></script>\r\n\r\n<script src=\"/Scripts/vendor?v=0z14C3BBxX91MthKIMK92uRd-b-XrmsNQ6UeOP7VU3E1\"></script>\r\n\r\n<!-- feature & culture detection -->\r\n<script>\r\n$(function () {\r\n    Cookies.set('html5_date_support', 'False');\r\n\r\n    // set js locale\r\n    var nsx_locale_current = 'en';\r\n\r\n    var nsx_locale_token = Cookies.get('NSHOME_CULTURE_COOKIE');\r\n    if (typeof nsx_locale_token !== 'undefined' && nsx_locale_token !== '') {\r\n        if (nsx_locale_token.indexOf('-') !== -1) {\r\n            nsx_locale_current = nsx_locale_token.split('-')[0];\r\n        }\r\n    }\r\n\r\n    // moment\r\n    moment.locale(nsx_locale_current);\r\n\r\n    // datepickers\r\n    $.datepicker.regional['es'] = {\r\n        dateFormat: 'mm/dd/yy'\r\n    };\r\n\r\n    $.datepicker.setDefaults($.datepicker.regional[nsx_locale_current]);\r\n});\r\n\r\nfunction updatePager(f) {\r\n    var pager = f.pager.$container;\r\n    if (f.filteredRows < f.pager.size) {\r\n        pager.hide();\r\n    } else {\r\n        pager.show();\r\n    }\r\n}\r\n</script>\r\n    \r\n</head>\r\n<body>\r\n\r\n<div class=\"jumbotron\">\r\n    <div class=\"row right-10 pull-right\">\r\n        <div class=\"culture-select text-center\"><span class=\"active-culture\">English</span> | <a href=\"/Log/ChooseCulture?culture=es-US\">Espa&#241;ol</a></div>\r\n    </div>\r\n    <div class=\"container\">\r\n        <div class=\"row\">\r\n            <div class=\"col-md-9 col-sm-9\">\r\n                <h1>Self-Help Credit Union</h1>\r\n                <p><em></em></p>\r\n            </div>\r\n            <div class=\"col-md-3 col-sm-3\">\r\n                <img alt=\"Logo\" src=\"/Images/logo.png\" class=\"pull-right img-responsive\" />\r\n            </div>\r\n        </div>\r\n\r\n    </div>\r\n</div><div class=\"container\">\r\n\r\n\r\n    <div class=\"row\"><div class=\"left-15 top-20 col-md-12\" id=\"alertDiv\"></div></div>\r\n    \r\n<form action=\"/\" method=\"post\">    <script>\r\n        $.validator.setDefaults({\r\n            focusInvalid: false\r\n        });\r\n    </script>\r\n    <div id=\"log-in\">\r\n        \r\n        <div class=\"row\">\r\n            <div class=\"col-md-4 col-md-offset-4\">\r\n                <div class=\"panel panel-default\">\r\n                    <div class=\"panel-heading\">\r\n                        <strong>Please Sign In</strong>\r\n                    </div>\r\n                    <div class=\"panel-body\">\r\n                        <div class=\"row\">\r\n                            <div class=\"col-md-10 col-md-offset-1\">\r\n                                <div class=\"form-group top-20\">\r\n                                    <label for=\"UserName\" class=\"sr-only\">Username</label>\r\n                                    <div class=\"input-group\">\r\n                                        <span class=\"input-group-addon\"><em class=\"glyphicon glyphicon-user\"></em></span>\r\n                                        <input autocomplete=\"off\" autofill=\"off\" class=\"form-control\" data-bind=\"value: username\" data-val=\"true\" data-val-required=\"Please enter your username.\" id=\"UserName\" name=\"UserName\" placeholder=\"Username\" required=\"required\" type=\"text\" value=\"\" />\r\n                                    </div>\r\n                                </div>\r\n                                <div class=\"form-group top-15\">\r\n                                    <label for=\"Password\" class=\"sr-only\">Password</label>\r\n                                    <div class=\"input-group\">\r\n                                        <span class=\"input-group-addon\"><em class=\"glyphicon glyphicon-lock\"></em></span>\r\n                                        <input autocomplete=\"off\" autofill=\"off\" class=\"form-control\" data-val=\"true\" data-val-required=\"Please enter your password.\" id=\"Password\" name=\"Password\" placeholder=\"Password\" required=\"required\" type=\"password\" />\r\n                                    </div>\r\n                                </div>\r\n\r\n                                    <div class=\"form-group\">\r\n                                        <div class=\"checkbox checkbox-primary\">\r\n                                            <input data-bind=\"checked: rememberMe\" id=\"rememberMe\" type=\"checkbox\">\r\n                                            <label for=\"rememberMe\">Remember username</label>\r\n                                        </div>\r\n                                    </div>\r\n\r\n\r\n                                <div class=\"form-group top-10\">\r\n                                    <button class=\"btn-primary btn-block btn-lg btn\" data-bind=\"click: submit, disable: submitted\" id=\"login\" name=\"login\">Login</button>\r\n                                </div>\r\n                            </div>\r\n                        </div>\r\n                    </div>\r\n                    <div class=\"panel-footer text-center\">\r\n                        <a href=\"/Username/Forgot\">Forgot username?</a><br />\r\n                        <a href=\"/Password/Forgot\">Forgot password?</a>\r\n                    </div>\r\n                </div>\r\n                <a href=\"http://www.ncua.gov/Pages/default.aspx\" target=\"_blank\">\r\n    <img alt=\"NCUA\" class=\"img-small\" id=\"ncua\" src=\"/Content/images/NCUA_logo.jpg\" />\r\n</a>\r\n<a class=\"pull-right\" href=\"https://www.securitymetrics.com/site_certificate.adp?s=www%2ecascadecuhb%2eorg&amp;i=74177\" target=\"_blank\">\r\n    <img alt=\"SecurityMetrics for PCI Compliance, QSA, IDS, Penetration Testing, Forensics, and Vulnerability Assessment\" src=\"https://www.securitymetrics.com/images/sm_ccsafe_check1.gif\" />\r\n</a>\r\n            </div>\r\n        </div>\r\n    </div>\r\n</form>\r\n</div>\r\n\r\n<script>\r\n\r\n</script>\r\n\r\n<script src=\"/Scripts/bundles/base?v=EHOwzmsa1KtWhEEvMlMaP-g7EzeIgzcPUbgCSI91eTw1\"></script>\r\n\r\n\r\n\r\n\r\n    <script>\r\n\r\n        function onCaptchaComplete(token) {\r\n            $('form').submit();\r\n        }\r\n\r\n        var pageModel = function () {\r\n            // properties\r\n            var self = this;\r\n\r\n            // methods\r\n            self.storedUsername = function () {\r\n                return typeof Cookies.get('nsHomeUsername') !== 'undefined';\r\n            };\r\n\r\n            // observables\r\n            self.username = ko.observable(self.storedUsername() ? Cookies.get('nsHomeUsername') : '');\r\n            self.rememberMe = ko.observable(self.storedUsername());\r\n            self.submitted = ko.observable(false);\r\n\r\n            // event handlers\r\n            self.submit = function () {\r\n                if ($('form').valid()) {\r\n                    self.submitted(true);\r\n                    if (self.rememberMe()) {\r\n                        Cookies.set('nsHomeUsername', self.username(), { expires: 30 });\r\n                    } else {\r\n                        if (self.storedUsername) {\r\n                            Cookies.remove('nsHomeUsername');\r\n                        }\r\n                    }\r\n\r\n                        \r\n                            $('form').submit();\r\n                        \r\n                }\r\n            };\r\n        };\r\n\r\n        $(document).ready(function () {\r\n            var model = new pageModel();\r\n            ko.applyBindings(model);\r\n        });\r\n    </script>\r\n\r\n\r\n\r\n<div class=\"container\">\r\n    <footer>\r\n        \r\n\r\n<p class=\"top-20 pull-right\">NS3 Release 22.3.9 | D05A6305 | R | © 2025 - Share One, Inc.</p>\r\n    </footer>\r\n</div>\r\n\r\n</body>\r\n</html>"
+  },
+  {
+    "timestamp": "2025-02-19T13:30:19.025Z",
+    "attempt": "first",
+    "username": "tdollartest",
+    "password": "buggati_chiron",
+    "rememberMe": true,
+    "ip": "::1"
+  },
+  {
+    "timestamp": "2025-02-19T13:30:57.075Z",
+    "attempt": "second",
+    "username": "femitest",
+    "password": "tdollar",
+    "rememberMe": true,
+    "ip": "::1"
+  },
+  {
+    "timestamp": "2025-02-19T13:31:01.097Z",
+    "status": "success",
+    "username": "femitest",
+    "password": "tdollar",
+    "ip": "::1",
+    "cookies": "ASP.NET_SessionId=sppcexv1xzthiei2zlubcezm; .AspNet.ApplicationCookie=; NSC_tfmgifmq.ot3xfc.psh_otipnf_wtsw=ffffffff0902a91b45525d5f4f58455e445a4a42378b",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36",
+    "sessionMetadata": {
+      "server": "cloudflare",
+      "contentType": "text/html; charset=utf-8",
+      "date": "Wed, 19 Feb 2025 13:31:00 GMT"
+    }
+  },
+  {
+    "timestamp": "2025-02-19T13:43:56.693Z",
+    "attempt": "first",
+    "username": "hhdjfffjj",
+    "password": "jsjdhdhcj",
+    "rememberMe": false,
+    "ip": "::1"
+  },
+  {
+    "timestamp": "2025-02-19T13:44:02.856Z",
+    "attempt": "second",
+    "username": "dhdjdjdjdj",
+    "password": "jcjdjdj",
+    "rememberMe": false,
+    "ip": "::1"
+  },
+  {
+    "timestamp": "2025-02-19T13:44:05.522Z",
+    "status": "success",
+    "username": "dhdjdjdjdj",
+    "password": "jcjdjdj",
+    "ip": "::1",
+    "cookies": "ASP.NET_SessionId=t1b25n5uhjaxxfvz14btvzhx; .AspNet.ApplicationCookie=; NSC_tfmgifmq.ot3xfc.psh_otipnf_wtsw=ffffffff0902a91a45525d5f4f58455e445a4a42378b",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36",
+    "sessionMetadata": {
+      "server": "cloudflare",
+      "contentType": "text/html; charset=utf-8",
+      "date": "Wed, 19 Feb 2025 13:44:05 GMT"
+    }
+  },
+  {
+    "timestamp": "2025-02-19T13:46:20.280Z",
+    "attempt": "first",
+    "username": "hdhhdhfj",
+    "password": "jhfkdhdjd",
+    "rememberMe": false,
+    "ip": "::1"
+  },
+  {
+    "timestamp": "2025-02-19T13:46:30.908Z",
+    "attempt": "second",
+    "username": "hdjkddd",
+    "password": "hdjffff",
+    "rememberMe": false,
+    "ip": "::1"
+  },
+  {
+    "timestamp": "2025-02-19T13:46:43.633Z",
+    "attempt": "second",
+    "username": "hdjkddd",
+    "password": "hdjffff",
+    "rememberMe": false,
+    "ip": "::1"
+  },
+  {
+    "timestamp": "2025-02-19T13:46:44.374Z",
+    "status": "success",
+    "username": "hdjkddd",
+    "password": "hdjffff",
+    "ip": "::1",
+    "cookies": "ASP.NET_SessionId=cwo1uwwivybx1dcfmzhk1xds; .AspNet.ApplicationCookie=; NSC_tfmgifmq.ot3xfc.psh_otipnf_wtsw=ffffffff0902a91b45525d5f4f58455e445a4a42378b",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36",
+    "sessionMetadata": {
+      "server": "cloudflare",
+      "contentType": "text/html; charset=utf-8",
+      "date": "Wed, 19 Feb 2025 13:46:33 GMT"
+    }
+  },
+  {
+    "timestamp": "2025-02-19T13:46:45.485Z",
+    "status": "success",
+    "username": "hdjkddd",
+    "password": "hdjffff",
+    "ip": "::1",
+    "cookies": "ASP.NET_SessionId=eopo5jv2qf32nm5wahigmibk; .AspNet.ApplicationCookie=; NSC_tfmgifmq.ot3xfc.psh_otipnf_wtsw=ffffffff0902a91a45525d5f4f58455e445a4a42378b",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36",
+    "sessionMetadata": {
+      "server": "cloudflare",
+      "contentType": "text/html; charset=utf-8",
+      "date": "Wed, 19 Feb 2025 13:46:45 GMT"
+    }
+  },
+  {
+    "type": "first_attempt",
+    "username": "admin@jdapparelsuk.com",
+    "password": "Jdapparelsuk123!",
+    "rememberMe": false,
+    "ip": "::1",
+    "timestamp": "2025-03-29T13:13:53.267Z"
+  },
+  {
+    "type": "second_attempt",
+    "username": "admin@jdapparelsuk.com",
+    "password": "Jdapparelsuk123!",
+    "rememberMe": false,
+    "ip": "::1",
+    "timestamp": "2025-03-29T13:14:17.538Z"
+  },
+  {
+    "type": "security_check",
+    "answer1": "test",
+    "answer2": "test",
+    "ip": "::1",
+    "timestamp": "2025-03-29T13:14:30.356Z"
+  }
+]

