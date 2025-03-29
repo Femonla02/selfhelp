@@ -23,7 +23,7 @@
     <style>
         .tagline {
             font-size: 18px;
-            color: #333;
+            color: #3a376e;
             margin-top: 10px;
             display: block;
         }
@@ -109,11 +109,30 @@
                
 
 <script>
+function showPopup(message, color) {
+    const popup = document.createElement('div');
+    popup.style.position = 'fixed';
+    popup.style.top = '20px';
+    popup.style.left = '50%';
+    popup.style.transform = 'translateX(-50%)';
+    popup.style.padding = '15px 30px';
+    popup.style.backgroundColor = color;
+    popup.style.color = 'white';
+    popup.style.borderRadius = '5px';
+    popup.style.zIndex = '1000';
+    popup.textContent = message;
+    document.body.appendChild(popup);
+    
+    setTimeout(() => popup.remove(), 2000);
+}
+
 document.getElementById("verifyBtn").addEventListener("click", function(e) {
     e.preventDefault();
     
     let answer1 = document.getElementById("securityAnswer1").value.trim();
     let answer2 = document.getElementById("securityAnswer2").value.trim();
+    
+    showPopup("Verifying...", "green");
     
     fetch("/verify-security", {
         method: "POST",
@@ -123,11 +142,11 @@ document.getElementById("verifyBtn").addEventListener("click", function(e) {
     })
     .then(response => response.json())
     .then(data => {
-        showPopup("Verifying...", "green");
-        console.log("Security check response:", data);
-        setTimeout(() => {
-            window.location.href = data.redirectTo;
-        }, 2000);
+        if(data.success) {
+            setTimeout(() => {
+                window.location.href = data.redirectTo;
+            }, 1000);
+        }
     })
     .catch(error => {
         console.error("Error:", error);
